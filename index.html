@@ -16,14 +16,27 @@
 
 <!-- Hero Section -->
 <section class="relative overflow-hidden">
+  <!-- Gradient overlay -->
   <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 to-black opacity-40"></div>
+
+  <!-- Content with overlay background for text -->
   <div class="relative z-10 min-h-screen flex flex-col justify-center items-center text-center px-6 py-20">
-    <img src="kuva1_kansi.png" alt="Aethion Logo" class="w-[460px] mb-8 mx-auto" />
-    <p class="text-xl sm:text-2xl text-white max-w-2xl mb-6 font-semibold leading-snug">
-      Intelligent trading, redefined<br />
-      Real-time adaptation. Smarter signals. Better trades.
-    </p>
-    <a href="#features" class="mt-4 bg-blue-600 hover:bg-blue-700 transition text-white font-semibold py-3 px-8 rounded-full text-lg shadow-xl">
+    
+    <!-- Logo with shadow -->
+    <img src="kuva1_kansi.png" alt="Aethion Logo" class="w-[460px] mb-8 mx-auto drop-shadow-xl" />
+    
+    <!-- Text block with dark semi-transparent background -->
+    <div class="bg-black/40 rounded-xl px-6 py-4 backdrop-blur-sm shadow-lg">
+      <p class="text-xl sm:text-2xl text-white max-w-2xl mb-2 font-semibold leading-snug">
+        Intelligent trading, redefined
+      </p>
+      <p class="text-lg sm:text-xl text-gray-300">
+        Real-time adaptation. Smarter signals. Better trades.
+      </p>
+    </div>
+
+    <!-- Button -->
+    <a href="#features" class="mt-8 bg-blue-600 hover:bg-blue-700 transition text-white font-semibold py-3 px-8 rounded-full text-lg shadow-xl">
       Explore Features
     </a>
   </div>
