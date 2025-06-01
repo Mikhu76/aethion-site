@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aethion – Trade with AI-intelligence</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -12,91 +12,81 @@
     }
   </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gray-950 text-white">
 
-  <!-- Hero -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-20 bg-gray-50">
-    <img src="kuva1_kansi.png" alt="Aethion Logo" class="w-[460px] mb-12" />
-    <p class="text-xl sm:text-2xl text-gray-700 max-w-2xl mb-8">Trade with AI-intelligence. Advanced ensemble-model bot using LSTM, Transformer, CNN, PPO and a meta-agent XGBoost</p>
-    <a href="#features" class="bg-teal-500 hover:bg-teal-600 transition text-white font-semibold py-3 px-6 rounded-full text-lg shadow-md">Explore Features</a>
-  </section>
-
-  <!-- Hero-Feature Image -->
-  <div class="my-20 px-4 text-center">
-    <img src="kuva2_tekniikka.png" alt="Adaptive AI for Smarter Trading" class="rounded-xl shadow-lg mx-auto max-w-3xl" />
-  </div>
-
-  <!-- Features -->
-  <section id="features" class="py-24 px-6 max-w-6xl mx-auto">
-    <h2 class="text-4xl font-bold text-center mb-12">Features</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700">
-      <div class="bg-white p-6 rounded-xl shadow-lg border">
-        <h3 class="text-xl font-semibold mb-2">Multi-model ensemble</h3>
-        <p>Combines LSTM, Transformer, CNN, PPO and a meta-agent XGBoost</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-lg border">
-        <h3 class="text-xl font-semibold mb-2">Live-learning PPO agent</h3>
-        <p>Continuously trained with real trade feedback through multi-layered CNN+LSTM architecture</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-lg border">
-        <h3 class="text-xl font-semibold mb-2">Dynamic SL/TP</h3>
-        <p>Adaptive stop-loss and take-profit with trailing and step-wise adjustments</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-lg border">
-        <h3 class="text-xl font-semibold mb-2">Confidence & signal quality</h3>
-        <p>Context-aware, filtered signals based on real-time reliability scoring</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-lg border">
-        <h3 class="text-xl font-semibold mb-2">Manual close awareness</h3>
-        <p>Understands and learns from user-triggered exits and anomalies</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-lg border">
-        <h3 class="text-xl font-semibold mb-2">Visual Interface</h3>
-        <p>Real-time dashboard for strategy control and analytics<br><br><span class="italic text-teal-600">Coming soon.</span></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Aethion -->
-  <section class="bg-gray-50 py-24 px-6 border-t">
-    <h2 class="text-4xl font-bold text-center mb-12">Why Aethion is better</h2>
-    <div class="max-w-4xl mx-auto text-gray-700 space-y-6 text-lg">
-      <p><strong>Most bots</strong> follow fixed rules or use only one model. Aethion uses live ensemble learning.</p>
-      <ul class="list-disc list-inside space-y-2">
-        <li>Real-time PPO optimization from market feedback</li>
-        <li>Adaptive SL/TP logic with profit protection</li>
-        <li>Meta-model powered signal validation</li>
-        <li>Self-correcting with every trade</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Token Section -->
-  <section class="py-24 px-6 max-w-4xl mx-auto text-center bg-white">
-    <h2 class="text-4xl font-bold mb-6">$AETHN Token</h2>
-    <p class="text-lg text-gray-600 mb-8">
-      $AETHN is the native utility token for Aethion. Used for ecosystem access, governance, and rewards.
+<!-- Hero Section -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 to-black opacity-40"></div>
+  <div class="relative z-10 min-h-screen flex flex-col justify-center items-center text-center px-6 py-20">
+    <img src="kuva1_kansi.png" alt="Aethion Logo" class="w-[460px] mb-8 mx-auto" />
+    <p class="text-2xl sm:text-3xl text-white max-w-2xl mb-6 font-semibold leading-snug">
+      Trade with AI-intelligence.<br />
+      Advanced multi-model strategy powered by PPO, LSTM, Transformer, CNN, and XGBoost.
     </p>
+    <a href="#features" class="mt-4 bg-blue-600 hover:bg-blue-700 transition text-white font-semibold py-3 px-8 rounded-full text-lg shadow-xl">
+      Explore Features
+    </a>
+  </div>
+</section>
 
-    <div class="my-12">
-      <img src="kuva_allocation.png" alt="AETHN Tokenomics Chart" class="mx-auto rounded-xl shadow-lg max-w-xl" />
+<!-- Divider Graphic -->
+<div class="max-w-6xl mx-auto px-6 my-16">
+  <img src="kuva2_tekniikka.png" alt="Tech Illustration" class="rounded-2xl shadow-2xl mx-auto max-w-4xl" />
+</div>
+
+<!-- Features -->
+<section id="features" class="py-24 px-6 max-w-6xl mx-auto">
+  <h2 class="text-4xl font-extrabold text-center mb-14">Key Features</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div class="bg-gray-900 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <h3 class="text-xl font-semibold mb-2">Ensemble AI Core</h3>
+      <p class="text-gray-300">Combines CNN, Transformer, LSTM, PPO, and XGBoost for robust decision-making.</p>
     </div>
-
-    <div class="my-12">
-      <img src="roadmap.png" alt="Aethion Roadmap" class="mx-auto rounded-xl shadow-lg max-w-xl" />
+    <div class="bg-gray-900 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <h3 class="text-xl font-semibold mb-2">Real-Time PPO Agent</h3>
+      <p class="text-gray-300">Deep PPO agent with CNN + MLP layers, trained live with actual market feedback.</p>
     </div>
+    <div class="bg-gray-900 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <h3 class="text-xl font-semibold mb-2">Dynamic Risk Engine</h3>
+      <p class="text-gray-300">Smart SL/TP system with adaptive thresholds and trailing logic.</p>
+    </div>
+    <div class="bg-gray-900 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <h3 class="text-xl font-semibold mb-2">Confidence-Weighted Signals</h3>
+      <p class="text-gray-300">Trades filtered by quality and confidence level, scored by meta-model.</p>
+    </div>
+    <div class="bg-gray-900 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <h3 class="text-xl font-semibold mb-2">Manual Exit Learning</h3>
+      <p class="text-gray-300">Learns from user closes, abnormal patterns, and integrates into future decisions.</p>
+    </div>
+    <div class="bg-gray-900 rounded-2xl p-6 shadow-md hover:shadow-xl transition">
+      <h3 class="text-xl font-semibold mb-2">Visual Dashboard</h3>
+      <p class="text-gray-300">Live performance panel with metrics, open trades, and configuration. <span class="italic text-blue-400">Coming soon.</span></p>
+    </div>
+  </div>
+</section>
 
-    <span class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-full text-lg">
-      Coming Soon
-    </span>
-  </section>
+<!-- Token Section -->
+<section class="py-24 px-6 max-w-4xl mx-auto text-center">
+  <h2 class="text-4xl font-bold mb-6">$AETHN Token</h2>
+  <p class="text-lg text-gray-300 mb-6">
+    $AETHN powers the Aethion ecosystem. It enables trading access, rewards, and future governance.
+  </p>
+  <div class="my-10">
+    <img src="kuva_allocation.png" alt="Tokenomics" class="mx-auto rounded-2xl shadow-lg max-w-xl" />
+  </div>
+  <div class="my-10">
+    <img src="roadmap.png" alt="Roadmap" class="mx-auto rounded-2xl shadow-lg max-w-xl" />
+  </div>
+  <span class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-full text-lg">
+    Coming Soon
+  </span>
+</section>
 
-  <!-- Footer -->
-  <footer class="text-center text-gray-500 py-10 text-sm bg-gray-100 border-t">
-    &copy; 2025 Aethion. All rights reserved.
-    <br />
-    <a href="whitepaper.pdf" target="_blank" class="underline text-gray-600 hover:text-black">View Whitepaper</a>
-  </footer>
+<!-- Footer -->
+<footer class="text-center text-gray-500 py-10 text-sm">
+  &copy; 2025 Aethion. All rights reserved.<br />
+  <a href="whitepaper.pdf" target="_blank" class="underline text-gray-400 hover:text-white">View Whitepaper</a>
+</footer>
 
 </body>
 </html>
