@@ -7,42 +7,53 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
 </head>
 <body class="bg-gray-950 text-white">
 
 <!-- Hero Section -->
 <section class="relative overflow-hidden">
+  <!-- Gradient overlay -->
   <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 to-black opacity-40"></div>
+
+  <!-- Content with overlay background for text -->
   <div class="relative z-10 min-h-screen flex flex-col justify-center items-center text-center px-6 py-20">
-    <img src="kuva1_kansi.png" alt="Aethion Logo" class="w-full max-w-lg mb-8 mx-auto drop-shadow-xl" />
+    
+    <!-- Logo with shadow -->
+    <img src="kuva1_kansi.png" alt="Aethion Logo" class="w-full max-w-xs sm:max-w-md mb-8 mx-auto drop-shadow-xl" />
+    
+    <!-- Text block with dark semi-transparent background -->
     <div class="bg-black/40 rounded-xl px-6 py-4 backdrop-blur-sm shadow-lg">
-      <p class="text-2xl text-white max-w-2xl mb-2 font-semibold leading-snug">
+      <p class="text-xl sm:text-2xl text-white max-w-2xl mb-2 font-semibold leading-snug">
         Intelligent trading, redefined
       </p>
-      <p class="text-xl text-gray-300">
+      <p class="text-lg sm:text-xl text-gray-300">
         Real-time adaptation. Smarter signals. Better trades.
       </p>
     </div>
+
+    <!-- Button -->
     <a href="#features" class="mt-8 bg-blue-600 hover:bg-blue-700 transition text-white font-semibold py-3 px-8 rounded-full text-lg shadow-xl">
       Explore Features
     </a>
   </div>
 </section>
 
+
 <!-- Divider Graphic -->
 <div class="max-w-6xl mx-auto px-6 my-16">
   <img src="kuva2_tekniikka.png" alt="Tech Illustration" class="rounded-2xl shadow-2xl mx-auto max-w-4xl" />
 </div>
 
-<!-- Features Section -->
+<!-- Features -->
 <section id="features" class="py-24 px-6 max-w-6xl mx-auto">
   <h2 class="text-4xl font-extrabold text-center mb-14">Key Features</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -76,14 +87,14 @@
 <!-- Token Section -->
 <section class="py-24 px-6 max-w-4xl mx-auto text-center">
   <h2 class="text-4xl font-bold mb-6">$AETHN Token</h2>
-  <p class="text-xl text-gray-300 mb-6">
+  <p class="text-lg text-gray-300 mb-6">
     $AETHN powers the Aethion ecosystem. It enables trading access, rewards, and future governance.
   </p>
   <div class="my-10">
-    <img src="kuva_allocation1.png" alt="Tokenomics" class="w-full max-w-lg mx-auto rounded-2xl shadow-lg" />
+    <img src="kuva_allocation1.png" alt="Tokenomics" class="w-full max-w-md mx-auto rounded-2xl shadow-lg" />
   </div>
   <div class="my-10">
-    <img src="roadmap.png" alt="Roadmap" class="w-full max-w-lg mx-auto rounded-2xl shadow-lg" />
+    <img src="roadmap.png" alt="Roadmap" class="w-full max-w-md mx-auto rounded-2xl shadow-lg" />
   </div>
   <span class="inline-block px-6 py-3 bg-yellow-400 text-black font-semibold rounded-full text-lg">
     Coming Soon
@@ -97,5 +108,3 @@
     View Aethion Whitepaper (PDF)
   </a>
 </footer>
-</body>
-</html>
