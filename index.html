@@ -1,87 +1,219 @@
 <!DOCTYPE html>
-<p class="text-xs uppercase tracking-wider text-white/50">Token address</p>
-<div class="mt-2 flex items-center justify-between gap-3">
-<code id="tokenAddress" class="truncate text-sm text-white/90">0x1a5397c0bc2e91876bD7106D38BC7F7Da8A580Ae</code>
-<button onclick="copyText('tokenAddress')" class="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-xs font-semibold text-white/90 hover:bg-white/10">Copy</button>
-</div>
-</div>
-<div class="glass rounded-2xl border border-white/10 p-5">
-<p class="text-xs uppercase tracking-wider text-white/50">Presale wallet</p>
-<div class="mt-2 flex items-center justify-between gap-3">
-<code id="presaleWallet" class="truncate text-sm text-white/90">0x8a21abc9665cd3a1f1b4458f0e82b3bd1a27ae8f</code>
-<button onclick="copyText('presaleWallet')" class="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-xs font-semibold text-white/90 hover:bg-white/10">Copy</button>
-</div>
-</div>
-</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aethion – Trade with AI-intelligence</title>
 
+  <!-- Tailwind CDN + Inter -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-<div id="presale" class="mt-6">
-<div class="glass rounded-2xl border border-white/10 p-0">
-<div class="flex flex-col items-start gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
-<div>
-<p class="text-sm text-white/70">Participate in the private sale</p>
-<p class="text-lg font-semibold">Send funds to the presale wallet and keep your TX hash</p>
-</div>
-<a href="https://pancakeswap.finance/swap?outputCurrency=0x1a5397c0bc2e91876bD7106D38BC7F7Da8A580Ae" target="_blank" rel="noreferrer" class="grad inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold shadow-xl">Buy on PancakeSwap</a>
-</div>
-</div>
-</div>
-</div>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] },
+          boxShadow: {
+            card: '0 20px 60px -20px rgba(0,0,0,.5)',
+          },
+          keyframes: {
+            shimmer: { '0%': { backgroundPosition: '0% 50%' }, '100%': { backgroundPosition: '200% 50%' } },
+            float: { '0%,100%': { transform:'translateY(0)' }, '50%': { transform:'translateY(-8px)' } },
+          },
+          animation: {
+            shimmer: 'shimmer 7s linear infinite',
+            float: 'float 6s ease-in-out infinite',
+          }
+        }
+      }
+    }
+  </script>
 
+  <style>
+    body{ font-family:'Inter',sans-serif; }
+    img{ max-width:100%; height:auto; }
+    /* Background: deep space + soft beams */
+    .bg-surface{
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(99,102,241,.18), transparent),
+        radial-gradient(800px 400px at 10% 10%, rgba(34,211,238,.12), transparent),
+        linear-gradient(180deg, #0B0F18, #070B12 45%, #000 100%);
+    }
+    /* Glass surface */
+    .glass{ background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); }
+    /* Accent gradient */
+    .grad{ background-image:linear-gradient(90deg,#6366F1,#8B5CF6,#22D3EE); }
+  </style>
+</head>
 
-<aside class="glass rounded-2xl border border-white/10 p-6 shadow-card lg:col-span-1">
-<h3 class="text-lg font-semibold">At a glance</h3>
-<ul class="mt-4 space-y-3 text-sm text-white/80">
-<li class="flex items-center justify-between"><span>Symbol</span><span class="font-semibold">AETHN</span></li>
-<li class="flex items-center justify-between"><span>Chain</span><span class="font-semibold">BNB Smart Chain</span></li>
-<li class="flex items-center justify-between"><span>Standard</span><span class="font-semibold">BEP‑20</span></li>
-<li class="flex items-center justify-between"><span>Total supply</span><span class="font-semibold">1,000,000,000</span></li>
-<li class="flex items-center justify-between"><span>Decimals</span><span class="font-semibold">18</span></li>
-</ul>
-<div class="mt-6">
-<a href="https://pinksale.finance/pinklock/bsc/record/1326487" target="_blank" rel="noreferrer" class="inline-block rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-300 hover:bg-emerald-500/15">View Locked Liquidity</a>
-</div>
-</aside>
-</div>
-</div>
-</section>
+<body class="bg-surface text-white antialiased selection:bg-indigo-500/40 selection:text-white">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-black/40 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <a href="#top" class="flex items-center gap-3">
+        <!-- Inline gradient dot (voit vaihtaa /logo.svg) -->
+        <span class="h-8 w-8 rounded-full grad block"></span>
+        <div class="leading-tight">
+          <p class="text-sm font-semibold tracking-wide">Aethion</p>
+          <p class="text-[10px] uppercase tracking-widest text-white/60">trade with ai-intelligence</p>
+        </div>
+      </a>
+      <nav class="hidden items-center gap-6 md:flex">
+        <a href="#features" class="text-sm text-white/80 hover:text-white">Features</a>
+        <a href="#token" class="text-sm text-white/80 hover:text-white">Token</a>
+        <a href="Aethion_Whitepaper.pdf" target="_blank" rel="noreferrer" class="text-sm text-white/80 hover:text-white">Whitepaper</a>
+      </nav>
+      <a href="#get" class="grad inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold shadow-xl shadow-indigo-900/30 transition hover:opacity-90">
+        Get AETHN
+      </a>
+    </div>
+  </header>
 
+  <!-- Hero Section -->
+  <section id="top" class="relative bg-transparent">
+    <div class="min-h-[88vh] flex flex-col justify-center items-center text-center px-6 py-20">
+      <!-- Hero art -->
+      <div class="relative w-full max-w-3xl">
+        <div class="glass rounded-3xl border border-white/10 p-1 shadow-2xl">
+          <img src="kansikuva1.png" alt="Aethion Visual" class="rounded-2xl object-cover w-full opacity-95" />
+        </div>
+        <div class="pointer-events-none absolute -right-8 -top-8 h-44 w-44 animate-float rounded-full blur-3xl"
+             style="background: radial-gradient(circle at 30% 30%, rgba(99,102,241,.5), transparent 60%)"></div>
+        <div class="pointer-events-none absolute -left-10 -bottom-10 h-56 w-56 animate-float rounded-full blur-3xl"
+             style="animation-delay:1.3s;background: radial-gradient(circle at 70% 70%, rgba(34,211,238,.45), transparent 60%)"></div>
+      </div>
 
-<!-- FOOTER -->
-<footer class="border-t border-white/10 py-10 text-sm text-white/70">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-<div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
-<div class="flex items-center gap-3">
-<div class="h-6 w-6 rounded-full grad"></div>
-<span>Aethion — trade with ai‑intelligence</span>
-</div>
-<div class="flex items-center gap-6">
-<a href="#features" class="hover:text-white">Features</a>
-<a href="#why" class="hover:text-white">Why</a>
-<a href="#token" class="hover:text-white">Token</a>
-<a href="Aethion_Whitepaper.pdf" target="_blank" rel="noreferrer" class="hover:text-white">Whitepaper</a>
-</div>
-</div>
-<p class="mt-6 text-center text-xs text-white/50">© 2025 Aethion. All rights reserved. Contact: <a class="underline hover:text-white" href="mailto:info@aethion.ai">info@aethion.ai</a></p>
-</div>
-</footer>
+      <!-- Headline -->
+      <div class="mt-10 bg-black/40 rounded-2xl px-6 py-5 backdrop-blur-sm shadow-2xl shadow-black/40 border border-white/10">
+        <p class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+          Intelligent trading, redefined
+        </p>
+        <p class="text-lg sm:text-xl text-white/70 mt-2">
+          Real-time adaptation. Smarter signals. Better trades.
+        </p>
+      </div>
 
+      <!-- CTA -->
+      <a href="#features"
+         class="mt-8 grad bg-[length:200%_200%] animate-shimmer transition text-white font-semibold py-3 px-8 rounded-full text-lg shadow-xl active:scale-[.99]">
+        Explore Features
+      </a>
+    </div>
+  </section>
 
-<script>
-function copyText(id){
-const el = document.getElementById(id);
-if(!el) return;
-const text = el.textContent.trim();
-navigator.clipboard?.writeText(text).then(() => {
-const btn = event?.target;
-if(btn){
-const old = btn.textContent;
-btn.textContent = 'Copied';
-setTimeout(()=> btn.textContent = old, 1200);
-}
-}).catch(()=>{});
-}
-</script>
+  <!-- Divider Graphic (uses your existing image name) -->
+  <div class="max-w-6xl mx-auto px-6 my-16">
+    <img src="kuva2_tekniikka.png" alt="Tech Illustration"
+         class="rounded-3xl shadow-2xl mx-auto w-full max-w-3xl border border-white/10" />
+  </div>
+
+  <!-- Features -->
+  <section id="features" class="py-24 px-6 max-w-7xl mx-auto">
+    <h2 class="text-4xl font-extrabold text-center mb-14">Key Features</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card -->
+      <article class="glass rounded-2xl p-6 border border-white/10 shadow-card hover:shadow-indigo-900/30 transition">
+        <h3 class="text-lg font-semibold mb-2">Ensemble AI Core</h3>
+        <p class="text-white/70 text-sm">Combines CNN, Transformer, LSTM, PPO, and XGBoost for advanced decision-making</p>
+      </article>
+      <article class="glass rounded-2xl p-6 border border-white/10 shadow-card hover:shadow-indigo-900/30 transition">
+        <h3 class="text-lg font-semibold mb-2">Real-Time PPO Agent</h3>
+        <p class="text-white/70 text-sm">Deep PPO agent with CNN + MLP/LSTM layers, trained live with market feedback</p>
+      </article>
+      <article class="glass rounded-2xl p-6 border border-white/10 shadow-card hover:shadow-indigo-900/30 transition">
+        <h3 class="text-lg font-semibold mb-2">Dynamic Risk Engine</h3>
+        <p class="text-white/70 text-sm">Smart SL/TP with adaptive thresholds, trailing and step-based profit upgrades</p>
+      </article>
+      <article class="glass rounded-2xl p-6 border border-white/10 shadow-card hover:shadow-indigo-900/30 transition">
+        <h3 class="text-lg font-semibold mb-2">Confidence-Weighted Signals</h3>
+        <p class="text-white/70 text-sm">Trades filtered by quality & confidence, scored by a calibrated meta-model</p>
+      </article>
+      <article class="glass rounded-2xl p-6 border border-white/10 shadow-card hover:shadow-indigo-900/30 transition">
+        <h3 class="text-lg font-semibold mb-2">Manual Exit Learning</h3>
+        <p class="text-white/70 text-sm">Learns from manual closes & abnormal patterns for smarter future decisions</p>
+      </article>
+      <article class="glass rounded-2xl p-6 border border-white/10 shadow-card hover:shadow-indigo-900/30 transition">
+        <h3 class="text-lg font-semibold mb-2">Visual Dashboard</h3>
+        <p class="text-white/70 text-sm">Live metrics, open trades & config <span class="italic text-cyan-300">Coming soon.</span></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Token Section -->
+  <section class="py-24 px-6 max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6">$AETHN Token</h2>
+    <p class="text-lg text-white/70 mb-10">
+      $AETHN powers the Aethion ecosystem. It enables trading access, rewards, and future governance.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <img src="tokenomics1.png" alt="Tokenomics"
+           class="w-full max-w-md mx-auto rounded-2xl shadow-2xl border border-white/10" />
+      <img src="roadmap.png" alt="Roadmap"
+           class="w-full max-w-md mx-auto rounded-2xl shadow-2xl border border-white/10" />
+    </div>
+
+    <div class="mt-10 text-xl font-semibold">
+      Real AI. No hype.<br />
+      <span class="text-white/70 font-normal">Aethion learns as it trades</span>
+    </div>
+  </section>
+
+  <!-- Official Token Info -->
+  <section class="py-20 px-6 text-center text-white/80">
+    <h2 class="text-4xl font-bold text-white mb-6">$AETHN – The Official Token</h2>
+    <p class="text-lg mb-6 max-w-2xl mx-auto">
+      The official utility token powering Aethion’s smart trading ecosystem. Always verify the contract from this site.
+    </p>
+
+    <div class="glass p-6 rounded-2xl inline-block text-sm text-left mx-auto max-w-md shadow-2xl border border-white/10">
+      <p><strong>🔹 Token Symbol:</strong> AETHN</p>
+      <p><strong>🔹 Blockchain:</strong> BNB Smart Chain (BEP-20)</p>
+      <p><strong>🔹 Official Contract:</strong><br />
+        <code class="text-white/90">0x1a5397c0bc2e91876bD7106D38BC7F7Da8A580Ae</code>
+      </p>
+      <p class="text-xs mt-2 text-white/50">Do not trust tokens from unofficial sources.</p>
+    </div>
+  </section>
+
+  <!-- Get AETHN Section -->
+  <section id="get" class="py-24 px-6 text-center">
+    <h2 class="text-4xl font-bold mb-6">Get AETHN</h2>
+    <p class="text-lg text-white/70 mb-6 max-w-xl mx-auto">
+      Buy AETHN tokens now on PancakeSwap. Join the AI trading revolution.
+    </p>
+    <a
+      href="https://pancakeswap.finance/swap?outputCurrency=0x1a5397c0bc2e91876bD7106D38BC7F7Da8A580Ae"
+      target="_blank" rel="noopener noreferrer"
+      class="inline-block grad bg-[length:200%_200%] animate-shimmer text-white font-semibold py-3 px-8 rounded-full shadow-xl transition active:scale-[.99] hover:opacity-95">
+      Buy on PancakeSwap
+    </a>
+  </section>
+
+  <!-- Liquidity Lock Info -->
+  <section class="bg-black/40 text-white py-16 px-6 text-center">
+    <h3 class="text-2xl font-bold mb-4">Liquidity Locked</h3>
+    <p class="text-lg text-white/70 mb-6">
+      100% liquidity has been locked for 12 months.
+    </p>
+    <a
+      href="https://pinksale.finance/pinklock/bsc/record/1326487"
+      target="_blank" rel="noopener noreferrer"
+      class="inline-block rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 font-semibold py-3 px-8 shadow-xl transition hover:bg-emerald-500/15">
+      View Locked Liquidity
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-white/60 py-10 text-sm">
+    &copy; 2025 Aethion. All rights reserved.<br />
+    <a href="Aethion_Whitepaper.pdf" target="_blank" class="underline text-cyan-300 hover:text-white font-semibold">
+      View Aethion Whitepaper (PDF)
+    </a>
+    <div class="mt-6 text-sm">
+      Contact: <a href="mailto:info@aethion.ai" class="underline hover:text-white">info@aethion.ai</a>
+    </div>
+  </footer>
 </body>
 </html>
-
