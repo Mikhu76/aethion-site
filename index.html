@@ -71,36 +71,35 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="top" class="relative bg-transparent">
-    <div class="min-h-[88vh] flex flex-col justify-center items-center text-center px-6 py-20">
-      <!-- Hero art -->
-      <div class="relative w-full max-w-3xl">
-        <div class="glass rounded-3xl border border-white/10 p-1 shadow-2xl">
-          <img src="kansikuva1.png" alt="Aethion Visual" class="rounded-2xl object-cover w-full opacity-95" />
-        </div>
-        <div class="pointer-events-none absolute -right-8 -top-8 h-44 w-44 animate-float rounded-full blur-3xl"
-             style="background: radial-gradient(circle at 30% 30%, rgba(99,102,241,.5), transparent 60%)"></div>
-        <div class="pointer-events-none absolute -left-10 -bottom-10 h-56 w-56 animate-float rounded-full blur-3xl"
-             style="animation-delay:1.3s;background: radial-gradient(circle at 70% 70%, rgba(34,211,238,.45), transparent 60%)"></div>
-      </div>
+<section class="bg-black">
+  <div class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-20">
 
-      <!-- Headline -->
-      <div class="mt-10 bg-black/40 rounded-2xl px-6 py-5 backdrop-blur-sm shadow-2xl shadow-black/40 border border-white/10">
-        <p class="text-2xl sm:text-3xl font-extrabold tracking-tight">
-          Intelligent trading, redefined
-        </p>
-        <p class="text-lg sm:text-xl text-white/70 mt-2">
-          Real-time adaptation. Smarter signals. Better trades.
-        </p>
-      </div>
+    <img src="kansikuva1.png" alt="Aethion Logo"
+         class="w-full max-w-xs sm:max-w-md mb-6 mx-auto drop-shadow-xl" />
 
-      <!-- CTA -->
-      <a href="#features"
-         class="mt-8 grad bg-[length:200%_200%] animate-shimmer transition text-white font-semibold py-3 px-8 rounded-full text-lg shadow-xl active:scale-[.99]">
-        Explore Features
-      </a>
+    <!-- Päivitystagi -->
+    <span class="mb-6 inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400
+                 text-black font-semibold px-4 py-1 rounded-full text-sm shadow-lg">
+      Updated September 2025
+    </span>
+
+    <div class="bg-black/40 rounded-xl px-6 py-4 backdrop-blur-sm shadow-lg">
+      <p class="text-xl sm:text-2xl text-white max-w-2xl mb-2 font-semibold leading-snug">
+        Intelligent trading, redefined
+      </p>
+      <p class="text-lg sm:text-xl text-gray-300">
+        Real-time adaptation. Smarter signals. Better trades.
+      </p>
     </div>
-  </section>
+
+    <a href="#features"
+       class="mt-8 bg-blue-600 hover:bg-blue-700 transition text-white font-semibold
+              py-3 px-8 rounded-full text-lg shadow-xl">
+      Explore Features
+    </a>
+  </div>
+</section>
+
 
   <!-- Divider Graphic (uses your existing image name) -->
   <div class="max-w-6xl mx-auto px-6 my-16">
@@ -140,25 +139,28 @@
     </div>
   </section>
 
-  <!-- Token Section -->
-  <section class="py-24 px-6 max-w-5xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-6">$AETHN Token</h2>
-    <p class="text-lg text-white/70 mb-10">
-      $AETHN powers the Aethion ecosystem. It enables trading access, rewards, and future governance.
-    </p>
+  <!-- Get AETHN Section -->
+<section class="bg-black text-white py-24 px-6 text-center">
+  <h2 class="text-4xl font-bold mb-6">Get AETHN</h2>
+  <p class="text-lg text-gray-300 mb-6 max-w-xl mx-auto">
+    Buy AETHN tokens now on PancakeSwap. Join the AI trading revolution.
+  </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <img src="tokenomics1.png" alt="Tokenomics"
-           class="w-full max-w-md mx-auto rounded-2xl shadow-2xl border border-white/10" />
-      <img src="roadmap.png" alt="Roadmap"
-           class="w-full max-w-md mx-auto rounded-2xl shadow-2xl border border-white/10" />
-    </div>
+  <!-- Sijoittajahyöty-lause -->
+  <p class="text-lg text-gray-300 mb-8 max-w-xl mx-auto italic">
+    As the trading core evolves, <span class="text-white font-semibold">$AETHN</span> holders benefit from improved performance and adoption.
+  </p>
 
-    <div class="mt-10 text-xl font-semibold">
-      Real AI. No hype.<br />
-      <span class="text-white/70 font-normal">Aethion learns as it trades</span>
-    </div>
-  </section>
+  <a
+    href="https://pancakeswap.finance/swap?outputCurrency=0x1a5397c0bc2e91876bD7106D38BC7F7Da8A580Ae"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition"
+  >
+    Buy on PancakeSwap
+  </a>
+</section>
+
 
   <!-- Official Token Info -->
   <section class="py-20 px-6 text-center text-white/80">
